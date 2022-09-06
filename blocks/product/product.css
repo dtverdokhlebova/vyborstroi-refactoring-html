@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2"), url("../../fonts/Roboto-Black.woff") format("woff");
+}
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.06);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.product:hover {
+  text-decoration: none;
+}
+.product__img {
+  position: relative;
+  padding-top: 92%;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .product__img {
+    padding-top: 85%;
+  }
+}
+.product__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.product__label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 2px 6px;
+  font: 500 17px/1.2 "Roboto", "Arial", sans-serif;
+  color: #cc2121;
+  background: #fff;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.product__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+.product__container:not(:last-child) {
+  margin-bottom: 15px;
+}
+.product__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 25px 25px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .product__info {
+    padding: 15px 20px;
+  }
+}
+.product__date {
+  color: #1e4c9a;
+  font: 14px/1.3 "Roboto", "Arial", sans-serif;
+}
+.product__descr {
+  font: 300 16px/1.4 "Roboto", "Arial", sans-serif;
+}
+@media (max-width: 768px) {
+  .product__descr {
+    font-size: 14px;
+  }
+}
+.product__descr-xs {
+  font: 300 13px/1.4 "Roboto", "Arial", sans-serif;
+}
+.product__title {
+  font: 500 18px/1.3 "Roboto", "Arial", sans-serif;
+}
+.product__title:hover {
+  color: #1e4c9a;
+}
+.product__price {
+  font: 500 16px/1.5 "Roboto", "Arial", sans-serif;
+  white-space: nowrap;
+}
+.product__ui-button {
+  margin-top: auto;
+}
+.product--xs {
+  height: auto;
+}
+.product--xs .product__img {
+  padding-top: 61%;
+}
+.product--xs .product__title {
+  width: 100%;
+  font-size: 16px;
+}
+.product--xs .product__descr {
+  font-size: 14px;
+}
+.product--xs .product__price {
+  font-weight: 300;
+  font-size: 14px;
+}
+.product--xs .product__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}

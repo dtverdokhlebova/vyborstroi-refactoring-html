@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2"), url("../../fonts/Roboto-Black.woff") format("woff");
+}
+.apartment-layout__head {
+  margin-bottom: 20px;
+}
+.apartment-layout__tabs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 5px;
+}
+.apartment-layout__tabs:not(:last-child) {
+  margin-bottom: 5px;
+}
+.apartment-layout__tab {
+  padding: 7px 10px;
+  background-color: #edf4fc;
+  font: 300 14px/1.2 "Roboto", "Arial", sans-serif;
+  text-align: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-animation: fade-in 0.5s ease;
+  animation: fade-in 0.5s ease;
+  cursor: pointer;
+}
+@media (min-width: 769px) {
+  .apartment-layout__tab:hover {
+    background-color: #1e4c9a;
+    color: #fff;
+  }
+}
+.apartment-layout__tab--active {
+  background-color: #1e4c9a;
+  color: #fff;
+}
+.apartment-layout__content {
+  display: none;
+  -webkit-animation: fade-in 0.5s ease;
+  animation: fade-in 0.5s ease;
+}
+.apartment-layout__content--active {
+  display: block;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

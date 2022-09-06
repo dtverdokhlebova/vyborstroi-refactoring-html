@@ -1,0 +1,22 @@
+.ui-ul {
+  margin: 0;
+  padding: 0 0 0 30px;
+  list-style: none;
+  li {
+    position: relative;
+    padding-left: 20px;
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc((0.6em + 6px) / 2);
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background: $blue;
+      border-radius: 50%;
+    }
+  }
+}

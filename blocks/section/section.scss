@@ -1,0 +1,27 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.section {
+  &:not(:last-child) {
+    margin-bottom: 55px;
+  }
+  &-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+      @include media-mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &--inner {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}

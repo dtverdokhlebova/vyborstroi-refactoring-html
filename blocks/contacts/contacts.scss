@@ -1,0 +1,106 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.contacts {
+  &__accordion {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__ui-h4 {
+    margin-bottom: 10px;
+  }
+  &__info {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: flex-start;
+    @include media-mobile {
+      grid-template-columns: 1fr;
+    }
+    &--column {
+      max-width: none;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      @include media-mobile {
+        gap: 20px;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+  }
+  &__text {
+    align-self: center;
+  }
+  &__img {
+    width: 30px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &--ava {
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+  &__tel {
+    font: 500 23px/1.3 $font;
+    @include media-mobile {
+      font-size: 20px;
+    }
+    &-descr {
+      font: 12px/1.3 $font;
+      color: $grey;
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+    font: 500 16px/1.3 $font;
+    @include media-mobile {
+      font-size: 14px;
+    }
+  }
+  &__descr {
+    font: 300 16px/1.4 $font;
+    color: $grey;
+    @include media-mobile {
+      font-size: 14px;
+    }
+    a {
+      text-decoration: underline;
+      color: $blue;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: flex-start;
+    @include media-mobile {
+      grid-template-columns: 100%;
+    }
+  }
+  &__map {
+    height: 400px;
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+  &__contacts-workers {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}

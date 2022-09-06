@@ -1,0 +1,99 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.main-ban {
+  overflow: hidden;
+  &__slider {
+    position: relative;
+    padding-top: 40.5%;
+    @include media-custom(680px) {
+      padding-top: 100%;
+    }
+  }
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__slide {
+    height: 100%;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    background-color: rgb(255 255 255 / 0.61);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    @include media-custom(680px) {
+      width: 40px;
+      height: 40px;
+    }
+    &:hover {
+      @include no-mobile {
+        background-color: $blue;
+        &::before {
+          border-color: #fff;
+        }
+      }
+    }
+    &:active {
+      background-color: $blue;
+      &::before {
+        border-color: #fff;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 30%;
+      height: 30%;
+      border: solid $blue;
+      border-width: 0 2px 2px 0;
+      transition: border-color 0.3s ease;
+    }
+    &--prev {
+      left: 15px;
+      &::before {
+        left: 55%;
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+    }
+    &--next {
+      right: 15px;
+      &::before {
+        left: 45%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+  &__scrollbar {
+    width: 25%;
+    height: 4px;
+    margin: 25px auto 0;
+    background: #e2e2e2;
+    border-radius: 8px;
+    @include media-custom(680px) {
+      width: 50%;
+      margin-top: 15px;
+    }
+    .swiper-scrollbar-drag {
+      background: $blue;
+      border-radius: inherit;
+    }
+  }
+}

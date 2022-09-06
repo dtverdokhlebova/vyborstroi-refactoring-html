@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  scroll-behavior: smooth;
+  &.no-scroll {
+    overflow: hidden;
+    body {
+      overflow: hidden;
+    }
+  }
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// defaults
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: var(--header-height, 170px);
+  font-family: $font;
+  color: $black;
+  .inner {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include media-laptop {
+      max-width: 100%;
+    }
+    @include media-mobile {
+      padding: 0 10px;
+    }
+  }
+  main {
+    flex: 1 0;
+    padding: 30px 0 50px;
+    @include media-mobile {
+      padding-top: 20px;
+    }
+  }
+  .text {
+    &-blue {
+      color: $blue;
+    }
+    &-red {
+      color: $red;
+    }
+  }
+  .plyr {
+    filter: drop-shadow(8px 3px 20px rgb(32 32 32 / 0.21));
+    &:hover {
+      .plyr {
+        &__controls {
+          transform: translateY(0);
+        }
+      }
+    }
+    &__controls {
+      transform: translateY(100%);
+    }
+    &__control--overlaid {
+      width: 65px;
+      height: 65px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 26px;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='28' viewBox='0 0 20 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.04954 2.11639C4.01968 -0.0422363 1.82067 1.21696 0.974898 2.11639V23.7026C0.467434 26.4009 2.87789 27.0754 4.14655 27.0754C7.10676 24.3772 13.7884 18.5759 16.8332 16.9569C19.8779 15.3379 19.7934 13.1343 19.3705 12.2349C15.7759 9.76149 8.0794 4.27501 6.04954 2.11639Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+:root {
+  --plyr-color-main: rgb(30 76 154 / 0.86);
+}

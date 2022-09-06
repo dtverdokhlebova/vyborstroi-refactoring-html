@@ -1,0 +1,64 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-top: 40px;
+  padding: 12px 25px;
+  background: $lightBlue;
+  border-radius: 9px;
+  @include media-mobile {
+    padding: 12px 20px;
+  }
+  &__list {
+    display: flex;
+    align-items: baseline;
+    column-gap: 15px;
+    margin: 0 30px;
+  }
+  &__link {
+    display: block;
+    font: 18px/1.2 $font;
+    color: $grey;
+    @include media-mobile {
+      font-size: 16px;
+    }
+    &:hover {
+      @include no-mobile {
+        transform: scale(1.1);
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+    &--active {
+      font-weight: 500;
+      color: $blue;
+      transform: scale(1.1);
+    }
+    &--prev,
+    &--next {
+      width: 17px;
+      height: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' width='17px' height='10px' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd' viewBox='0 0 1.08 0.62'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .fil0 %7Bfill:%236C6C6C;fill-rule:nonzero%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cpolygon class='fil0' points='0.07,0 0.54,0.48 1.01,0.01 1.08,0.08 0.54,0.62 0,0.07 '/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &--prev {
+      transform: rotate(90deg);
+      &:hover {
+        transform: rotate(90deg) scale(1.1);
+      }
+    }
+    &--next {
+      transform: rotate(-90deg);
+      &:hover {
+        transform: rotate(-90deg) scale(1.1);
+      }
+    }
+  }
+}

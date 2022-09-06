@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2"), url("../../fonts/Roboto-Black.woff") format("woff");
+}
+.business-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1390px) {
+  .business-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 999px) {
+  .business-card {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1390px) {
+  .business-card__ui-text {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 999px) {
+  .business-card__ui-text {
+    grid-column: unset;
+  }
+}
+.business-card__item {
+  padding: 20px 25px;
+  background: #edf4fc;
+  border-radius: 9px;
+}
+@media (max-width: 768px) {
+  .business-card__item {
+    padding: 20px 15px;
+  }
+}
+.business-card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.business-card__img {
+  width: 145px;
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .business-card__img {
+    width: 115px;
+    margin-right: 15px;
+  }
+}
+.business-card__img img {
+  display: block;
+}
+.business-card__name {
+  margin-bottom: 5px;
+  font: 500 20px/1.3 "Roboto", "Arial", sans-serif;
+}
+@media (max-width: 999px) {
+  .business-card__name {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .business-card__name {
+    font-size: 16px;
+  }
+}
+.business-card__job {
+  margin-bottom: 10px;
+  font: 300 14px/1.3 "Roboto", "Arial", sans-serif;
+}
+@media (max-width: 768px) {
+  .business-card__job {
+    font-size: 12px;
+  }
+}
+.business-card__tel {
+  font: 500 18px/1.4 "Roboto", "Arial", sans-serif;
+}
+.business-card__tel:hover {
+  text-decoration: none;
+  color: #1e4c9a;
+}
+.business-card__tel-xs {
+  font-size: 13px;
+}
+.business-card__tel-descr {
+  font: 300 12px/1.3 "Roboto", "Arial", sans-serif;
+}
+.business-card__mail {
+  display: inline-block;
+  font: 300 15px/1.4 "Roboto", "Arial", sans-serif;
+  color: #1e4c9a;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .business-card__mail {
+    font-size: 13px;
+  }
+}
+.business-card__address {
+  margin-top: 20px;
+  font: 16px/1.3 "Roboto", "Arial", sans-serif;
+  color: #1e4c9a;
+}
+@media (max-width: 768px) {
+  .business-card__address {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
+.business-card__shedule {
+  margin-top: 5px;
+  font: 300 16px/1.4 "Roboto", "Arial", sans-serif;
+}
+@media (max-width: 768px) {
+  .business-card__shedule {
+    font-size: 14px;
+  }
+}
+.business-card__shedule b {
+  font-weight: 500;
+}
+.business-card__shedule p {
+  margin: 0;
+}

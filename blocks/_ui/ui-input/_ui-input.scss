@@ -1,0 +1,23 @@
+.ui-input {
+  position: relative;
+  input {
+    width: 100%;
+    padding: 15px 20px;
+    font: 18px/1.3 $font;
+    background: $lightBlue;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    color: $grey;
+    outline: none;
+    transition: border-color 0.4s ease;
+    @include media-mobile {
+      font-size: 16px;
+    }
+    &::placeholder {
+      font-weight: 300;
+    }
+    &:focus {
+      border-color: $blue;
+    }
+  }
+}

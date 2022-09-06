@@ -1,0 +1,31 @@
+.ui-scroll-top {
+  position: fixed;
+  right: 40px;
+  bottom: 100px;
+  z-index: 100;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='70' height='29' viewBox='0 0 70 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.04946 27.5183C3.56774 27.8796 2.96559 28 2.42366 27.9398C1.94194 27.8194 1.46022 27.5785 1.09893 27.157L0.978497 27.0366C0.617207 26.5548 0.496777 25.9527 0.556992 25.4108C0.677422 24.8688 0.918282 24.3871 1.33979 24.0258C7.06022 18.3656 25.9075 6.02151 33.6151 0.421505C33.9763 0.12043 34.4581 0 34.9398 0C35.4215 0 35.843 0.180645 36.2645 0.421505C43.9118 6.02151 62.9398 18.4258 68.6 24.086C69.0817 24.4473 69.3226 24.929 69.3828 25.471C69.5032 26.0129 69.3226 26.6151 69.0215 27.0968L68.9011 27.2172C68.5398 27.6387 68.0581 27.9398 67.5763 28C66.9742 28.0602 66.372 27.9398 65.8903 27.5785C55.5333 20.1118 45.2366 12.4645 34.9398 4.93763L4.04946 27.5183Z' fill='%231E4C9A'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(0);
+  transition: 0.3s ease;
+  cursor: pointer;
+  @include media-mobile {
+    right: 20px;
+    bottom: 30px;
+  }
+  &:hover {
+    transform: scale(1.2);
+    filter: none;
+    @include media-mobile {
+      transform: none;
+      filter: brightness(0);
+    }
+  }
+}

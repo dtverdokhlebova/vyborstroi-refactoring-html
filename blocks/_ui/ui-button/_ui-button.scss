@@ -1,0 +1,144 @@
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 33px;
+  text-align: center;
+  font: 15px/1.2 $font;
+  white-space: nowrap;
+  color: #fff;
+  background-color: $blue;
+  border: 1px solid $blue;
+  box-shadow: 3px 1px 9px rgb(0 0 0 / 0.1);
+  border-radius: 9px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  @include media-tablet {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  @include media-mobile {
+    font-size: 14px;
+  }
+  &:active {
+    background-color: transparent;
+    color: $blue;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    @include no-mobile {
+      background-color: transparent;
+      color: $blue;
+    }
+  }
+  &__ripple {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    padding-top: 100%;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: ripple 0.5s linear;
+  }
+  &--light-blue {
+    background-color: $lightBlue;
+    color: $blue;
+  }
+  &--empty {
+    border-color: $blue;
+    background-color: transparent;
+    color: $blue;
+    box-shadow: none;
+    &:active {
+      background-color: $blue;
+      color: #fff;
+    }
+    &:hover {
+      @include no-mobile {
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+  }
+  &--ripple {
+    position: relative;
+    border: 0;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    &:active {
+      background-color: $blue;
+      color: #fff;
+    }
+    &:hover {
+      @include no-mobile {
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+  }
+  &--link-arrow {
+    position: relative;
+    width: fit-content;
+    padding: 0 22px 0 0;
+    font-weight: 500;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: $blue;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%) rotate(45deg);
+      width: 6px;
+      height: 6px;
+      border: 1px solid;
+      border-bottom-width: 0;
+      border-left-width: 0;
+      transition: 0.3s ease;
+    }
+    &:active {
+      &::before {
+        transform: translate(5px, -50%) rotate(45deg);
+      }
+    }
+    &:hover {
+      &::before {
+        @include no-mobile {
+          transform: translate(5px, -50%) rotate(45deg);
+        }
+      }
+    }
+  }
+  &--white {
+    color: $blue;
+    background-color: #fff;
+    border: 0;
+    &:hover {
+      text-decoration: none;
+      @include no-mobile {
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+    &:active {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  &--xs {
+    padding: 6px 12px;
+  }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}

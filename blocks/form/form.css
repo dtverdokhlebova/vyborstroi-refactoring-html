@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2"), url("../../fonts/Roboto-Black.woff") format("woff");
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 50px;
+}
+@media (max-width: 999px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+.form__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.form__label {
+  margin-bottom: 5px;
+  font: 16px/1.4 "Roboto", "Arial", sans-serif;
+}
+.form__required {
+  color: #cc2121;
+}
+.form__file-descr {
+  margin-top: 10px;
+  font: 300 12px/1.3 "Roboto", "Arial", sans-serif;
+}
+.form__address {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 22%);
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .form__address {
+    grid-template-columns: 1fr;
+  }
+}
+.form__address .form__item {
+  margin-bottom: 0;
+}
+.form__subm {
+  grid-column: 1/-1;
+}
+.form__ui-checkbox {
+  margin-top: 25px;
+}
+.form__legend {
+  margin-top: 10px;
+  font: 300 14px/1.3 "Roboto", "Arial", sans-serif;
+}
+@media (max-width: 768px) {
+  .form__legend {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 50px;
+  @include media-tablet {
+    grid-template-columns: 1fr;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__label {
+    margin-bottom: 5px;
+    font: 16px/1.4 $font;
+  }
+  &__required {
+    color: $red;
+  }
+  &__file-descr {
+    margin-top: 10px;
+    font: 300 12px/1.3 $font;
+  }
+  &__address {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 22%);
+    gap: 15px;
+    @include media-mobile {
+      grid-template-columns: 1fr;
+    }
+    .form__item {
+      margin-bottom: 0;
+    }
+  }
+  &__subm {
+    grid-column: 1/-1;
+  }
+  &__ui-checkbox {
+    margin-top: 25px;
+  }
+  &__legend {
+    margin-top: 10px;
+    font: 300 14px/1.3 $font;
+    @include media-mobile {
+      font-size: 12px;
+    }
+  }
+}

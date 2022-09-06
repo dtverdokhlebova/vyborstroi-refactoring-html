@@ -1,0 +1,59 @@
+.ui-text {
+  font: 300 16px/1.4 $font;
+  @include media-mobile {
+    font-size: 14px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  p {
+    margin: 0;
+  }
+  .ui-ul,
+  p {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__date {
+    margin-bottom: 5px;
+    font: 14px/1.2 $font;
+    color: $blue;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 46%;
+    gap: 25px;
+    @include media-tablet {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__content {
+    &:first-child {
+      @include media-tablet {
+        grid-row: 1;
+      }
+    }
+  }
+  &__video {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &--fw-normal {
+    font-weight: 400;
+  }
+}

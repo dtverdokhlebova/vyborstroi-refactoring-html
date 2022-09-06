@@ -1,0 +1,54 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.apartment-layout {
+  &__head {
+    margin-bottom: 20px;
+  }
+  &__tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 5px;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  &__tab {
+    padding: 7px 10px;
+    background-color: $lightBlue;
+    font: 300 14px/1.2 $font;
+    text-align: center;
+    transition: 0.3s ease;
+    animation: fade-in 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      @include no-mobile {
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+    &--active {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  &__content {
+    display: none;
+    animation: fade-in 0.5s ease;
+    &--active {
+      display: block;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

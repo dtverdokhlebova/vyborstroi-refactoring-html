@@ -1,0 +1,67 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.contacts-workers {
+  max-width: 1030px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  @include media-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include media-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
+    display: block;
+    text-align: center;
+    &:hover {
+      text-decoration: none;
+    }
+    &--best {
+      .contacts-workers {
+        &__ava {
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' width='21px' height='20px' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd' viewBox='0 0 0.33 0.31'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .fil2 %7Bfill:%23EDBD31;fill-rule:nonzero%7D .fil0 %7Bfill:%23F3CC30;fill-rule:nonzero%7D .fil1 %7Bfill:%23F7DB5E;fill-rule:nonzero%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cg id='_2259994646928'%3E%3Cpath class='fil0' d='M0.17 0l0.04 0.1c0.01,0 0.01,0 0.01,0l0.1 0.01c0.01,0.01 0.01,0.01 0.01,0.01l-0.08 0.08c0,0 0,0 0,0l0.02 0.11c0,0 -0.01,0 -0.01,0l-0.09 -0.05c-0.01,0 -0.01,0 -0.01,0l-0.09 0.05c-0.01,0 -0.01,0 -0.01,0l0.02 -0.11c0,0 0,0 0,0l-0.08 -0.08c0,0 0,0 0,-0.01l0.11 -0.01c0,0 0,0 0,0l0.05 -0.1c0,0 0.01,0 0.01,0z'/%3E%3Cpath class='fil1' d='M0.16 0.02l-0.04 0.08c0,0.01 0,0.01 -0.01,0.01l-0.09 0.01 0.1 0c0,0.01 0.01,0 0.01,0l0.03 -0.1z'/%3E%3Cpath class='fil2' d='M0.06 0.29l0 0.02c0,0 0,0 0.01,0l0.09 -0.05c0,0 0,0 0.01,0l0.09 0.05c0,0 0.01,0 0.01,0l-0.02 -0.11c0,0 0,0 0,0l0.08 -0.08c0,0 0,0 -0.01,-0.01l-0.03 0c-0.06,0.1 -0.14,0.15 -0.23,0.18z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+  &__ava {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 5px;
+    @include media-mobile {
+      width: 120px;
+      height: 120px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    font: 16px/1.4 $font;
+    color: $blue;
+  }
+  &__job {
+    font: 300 13px/1.4 $font;
+    &:hover {
+      color: $blue;
+    }
+  }
+}

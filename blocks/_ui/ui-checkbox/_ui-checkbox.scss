@@ -1,0 +1,58 @@
+.ui-checkbox {
+  input[type='checkbox'] {
+    display: none;
+    &:checked + label {
+      &::before {
+        background: $blue;
+        border-color: $blue;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  label {
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+    font: 16px/1.4 $font;
+    cursor: pointer;
+    user-select: none;
+    @include media-mobile {
+      font-size: 14px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $lightGrey;
+      border-radius: 6px;
+      transition: 0.3s ease;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      width: 14px;
+      height: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.66667 3.33333L0 5L5 10L13.3333 1.66667L11.6667 0L5 6.66667L1.66667 3.33333Z' fill='white'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+    &:hover {
+      &::before {
+        border-color: $blue;
+      }
+    }
+    a {
+      color: $blue;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2"), url("../../fonts/Roboto-Black.woff") format("woff");
+}
+.accordion-item {
+  overflow: hidden;
+}
+.accordion-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+.accordion-item__head {
+  position: relative;
+  padding: 10px 40px 10px 20px;
+  background: #edf4fc;
+  font: 17px/1.3 "Roboto", "Arial", sans-serif;
+  cursor: pointer;
+}
+.accordion-item__head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 18px;
+  height: 11px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2L10 10L19 2' stroke='%23373A36' stroke-width='3'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 999px) {
+  .accordion-item__head::after {
+    right: 17px;
+    width: 15px;
+    height: 10px;
+  }
+}
+.accordion-item__head--active::after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.accordion-item__main {
+  display: none;
+  padding: 20px 40px;
+  font: 16px/1.3 "Roboto", "Arial", sans-serif;
+}
+@media (max-width: 999px) {
+  .accordion-item__main {
+    padding: 20px 0;
+    font-size: 14px;
+  }
+}

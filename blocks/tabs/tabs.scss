@@ -1,0 +1,155 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/media';
+@import '../../styles/utils/fonts';
+
+.tabs {
+  &__current {
+    display: none;
+    padding: 8px 10px;
+    font: 17px/1.2 $font;
+    background-color: $blue;
+    color: #fff;
+    cursor: pointer;
+    &::after {
+      content: '';
+      width: 30px;
+      height: 19px;
+      margin-left: auto;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' width='30px' height='19px' version='1.0' shape-rendering='geometricPrecision' text-rendering='geometricPrecision' image-rendering='optimizeQuality' fill-rule='evenodd' clip-rule='evenodd' viewBox='0 0 3000000 1900039'%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Crect fill='white' x='-4' width='3000008' height='300000'/%3E%3Crect fill='white' x='-4' y='799961' width='3000008' height='300000'/%3E%3Crect fill='white' x='-4' y='1600039' width='3000008' height='300000'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @include media-tablet {
+      display: flex;
+    }
+    .tabs__icon {
+      filter: brightness(200%);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $lightBlue;
+    @include media-tablet {
+      display: none;
+      flex-direction: column;
+      border: solid #eee;
+      border-width: 0 1px;
+      background-color: transparent;
+    }
+  }
+  &__button {
+    padding: 8px 10px;
+    font: 15px/1.4 $font;
+    text-align: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+    @include media-tablet {
+      display: flex;
+      align-content: center;
+      padding: 10px;
+      text-align: start;
+    }
+    &--active {
+      color: #fff;
+      background-color: $blue;
+      @include media-tablet {
+        color: inherit;
+        background-color: inherit;
+      }
+    }
+    &--promo {
+      margin: 6px 3px;
+      padding: 2px 10px;
+      color: $pink;
+      border: solid $pink;
+      border-width: 0 1px;
+      @include media-tablet {
+        margin: 0;
+        padding: 8px 10px;
+        background-color: $pink;
+        color: #fff;
+        border: 0;
+      }
+      &:hover {
+        background-color: $pink;
+        color: #fff;
+      }
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    order: -1;
+    @include media-tablet {
+      display: inline-block;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__main {
+    padding-top: 30px;
+  }
+  &__content {
+    display: none;
+    animation: fade-in 0.5s ease;
+    &--active {
+      display: block;
+    }
+  }
+  &--xs {
+    .tabs {
+      &__list {
+        gap: 3px;
+        background-color: transparent;
+      }
+      &__button {
+        min-width: 110px;
+        padding: 5px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #b9b9b9;
+        @include media-tablet {
+          padding: 10px;
+          font-size: 15px;
+          color: $black;
+          background-color: transparent;
+          border-bottom: 1px solid #eee;
+        }
+        &--active {
+          background-color: $blue;
+          @include media-tablet {
+            background-color: transparent;
+          }
+        }
+      }
+      &__main {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

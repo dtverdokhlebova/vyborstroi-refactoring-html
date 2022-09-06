@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Thin.woff2") format("woff2"), url("../../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Light.woff2") format("woff2"), url("../../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2"), url("../../fonts/Roboto-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2"), url("../../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2"), url("../../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2"), url("../../fonts/Roboto-Black.woff") format("woff");
+}
+.popup .fancybox__backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+.popup .fancybox__content {
+  padding: 0;
+  background: transparent;
+}
+.popup .fancybox__toolbar {
+  background: transparent;
+}
+@media (max-width: 1390px) {
+  .popup .fancybox__slide {
+    padding: 50px 100px;
+  }
+}
+@media (max-width: 999px) {
+  .popup .fancybox__slide {
+    padding: 50px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .popup .fancybox__slide {
+    padding: 40px 10px;
+  }
+}
+.popup .carousel__button.is-close {
+  top: -15px;
+  right: -15px;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='54' viewBox='0 0 127.32 127.32' shape-rendering='geometricPrecision' text-rendering='geometricPrecision' image-rendering='optimizeQuality' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cdefs%3E%3Cstyle%3E.fil0%7Bfill:%23cbcccb;fill-rule:nonzero%7D%3C/style%3E%3C/defs%3E%3Cpath class='fil0' d='M8.9 0l54.76 54.76L118.42 0l8.9 8.9-54.76 54.76 54.76 54.76-8.9 8.9-54.76-54.76L8.9 127.32l-8.9-8.9 54.76-54.76L0 8.9z' id='Слой_x0020_1'/%3E%3C/svg%3E");
+  background-size: 14px 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .popup .carousel__button.is-close {
+    right: 15px;
+  }
+}
+.popup .carousel__button.is-close svg {
+  display: none;
+}
