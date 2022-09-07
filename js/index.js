@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   uiDropFile()
   catalog()
   accordion()
-  // customPlayer()
+  customPlayer()
   popupGallery()
   flat()
   cookies()
